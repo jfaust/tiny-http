@@ -255,8 +255,10 @@ where
         let header = header.into();
 
         // ignoring forbidden headers
-        if header.field.equiv("Connection")
-            || header.field.equiv("Trailer")
+        if
+        /*header.field.equiv("Connection")
+        ||*/
+        header.field.equiv("Trailer")
             || header.field.equiv("Transfer-Encoding")
             || header.field.equiv("Upgrade")
         {
